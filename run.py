@@ -1,6 +1,6 @@
 board = [["-", "-", "-"],
-          ["-", "-", "-"],
-          ["-", "-", "-"]]
+         ["-", "-", "-"],
+         ["-", "-", "-"]]
 
 # print the board
 
@@ -27,30 +27,31 @@ def is_tie():
 
 def play(player_turn):
     print_board()
-  while True:
-    print("Player " + player_turn + ", your turn.")
+    while True:
+        print("Player " + player_turn + ", your turn.")
+        row = input("Choose row: ")
+        column = input("Choose column: ")
+        row = int(row) - 1
+        column = int(column) - 1
 
-    row = input("Choose row: ")
-    column = input("Choose column: ")
-    row = int(row) - 1
-    column = int(column) - 1
+        board[row][column] = player_turn
 
-    board[row][column] = player_turn
+        print_board()
 
-    print_board()
+        # check for win or tie
 
-    # check for win or tie
-    if has_winner():
-      print("Player " + player_turn + " Won!")
-      break
-    elif is_tie():
-      print("It it a tie!.")
-      break
+        if has_winner():
+            print("Player " + player_turn + " Won!")
+            break
+        elif is_tie():
+            print("It is a tie!.")
+            break
 
-    # change player
-    if player_turn == "X":
-      player_turn = "0"
-    else:
-      player_turn = "X"
+        # change player
+        if player_turn == "X":
+            player_turn = "0"
+        else:
+            player_turn = "X"
+
 
 play("X")
