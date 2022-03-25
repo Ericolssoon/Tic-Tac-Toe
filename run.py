@@ -29,10 +29,24 @@ def play(player_turn):
     print_board()
     while True:
         print("Player " + player_turn + ", your turn.")
-        row = input("Choose row: ")
-        column = input("Choose column: ")
-        row = int(row) - 1
-        column = int(column) - 1
+        
+        input_ok = False
+        row = ""
+        column = ""
+        while not input_ok:
+            row = input("Choose row: ")
+            column = input("Choose column: ")
+            if row in ["1", "2", "3"] and column in ["1", "2", "3"]:
+                row = int(row) - 1
+                column = int(column) - 1
+                if board[row][column] == "-":
+                    input_ok = True
+                else:
+                    print("This place is already taken. Try again.")
+            else:
+                print("Try again.")
+            
+
 
         board[row][column] = player_turn
 
