@@ -14,6 +14,25 @@ def print_board():
 
 
 def has_winner():
+    # check rows
+    if board[0][0] == board[0][1] == board[0][2] != "-":
+        return True
+    elif board[1][0] == board[1][1] == board[1][2] != "-":
+        return True
+    elif board[2][0] == board[2][1] == board[2][2] != "-":
+        return True
+    # check columns
+    elif board[0][0] == board[1][0] == board[2][0] != "-":
+        return True
+    elif board[0][1] == board[1][1] == board[2][1] != "-":
+        return True
+    elif board[0][2] == board[1][2] == board[2][2] != "-":
+        return True
+    # check diagonals
+    elif board[0][0] == board[1][1] == board[2][2] != "-":
+        return True
+    elif board[0][2] == board[1][1] == board[2][0] != "-":
+        return True
     return False
 
 # check for tie
@@ -42,7 +61,7 @@ def play(player_turn):
                 if board[row][column] == "-":
                     input_ok = True
                 else:
-                    print("This place is already taken. Try again.")
+                    print("This spot is already taken. Try again.")
             else:
                 print("Try again.")
             
