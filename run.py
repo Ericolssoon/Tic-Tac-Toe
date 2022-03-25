@@ -39,7 +39,11 @@ def has_winner():
 
 
 def is_tie():
-    return False
+    for row in board:
+        for element in row:
+            if element == "-":
+                return False
+    return True
 
 # start game
 
