@@ -1,31 +1,75 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tic Tac Toe
 
-Welcome Ericolssoon,
+This is my Tic Tac Toe game, which runs in the Code Institute mock terminal on Heroku
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+In this game you can play against a friend you have in real life or any person you know.
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How to play
 
-## Creating the Heroku app
+There are 3 rows, and each row has columns from 1-3.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+You and your friend play as Player 'X' and Player '0'. 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Player 'X' starts the game by choosing which row and column.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+The board will print out and player 'X' will see where he placed his marker.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The game goes on until there is a winner or when it end with a tie.
 
-Connect your GitHub repository and deploy as normal.
+Have fun!
 
-## Constraints
+## Features
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Existing Features
 
------
-Happy coding!
+- Input validation error-checking
+
+  - You cannot enter rows or columns outside of 1-3
+
+![Error validation](assets/images/Features.png)
+
+### Future Features
+
+- Have a best of three feature with a scoreboard
+- A restart or quit option
+
+## Testing
+
+I have manually tested this project by doin the following:
+
+- Passed the code through a PEP8 linter and confirmed there are no problems
+- Tested in my local terminal and the Code Institute Heroku terminal.
+
+### Bugs
+<br>
+
+#### Solved bugs
+
+- When i wrote my code and tried to run it, i got error messages because the indentation was wrong. I fixed 
+this by right clicking on the code, then ''Format document with python''.
+
+### Remaining Bugs
+
+- No bugs remaining
+
+### Validator Testing
+
+- PEP8
+   - No errors were returned PEP8online.com
+
+## Deployment
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+- Steps for Deployment
+   - Fork or clone this repository
+   - Create a new Heroku app
+   - Set the buildhacks to Python and NodeJS, in that order
+   - Link the Heroku app to the repository
+   - Click on Deploy
+
+
+## Credits 
+
+- Code Institute for the deployment terminal
