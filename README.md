@@ -4,6 +4,7 @@ This is my Tic Tac Toe game, which runs in the Code Institute mock terminal on H
 
 In this game you can play against a friend you have in real life or any person you know.
 
+![Different devices](assets/images/Responsive.png)
 
 ## How to play
 
@@ -41,10 +42,9 @@ I have manually tested this project by doin the following:
 - Passed the code through a PEP8 linter and confirmed there are no problems
 - Tested in my local terminal and the Code Institute Heroku terminal.
 
-### Bugs
-<br>
+## Bugs
 
-#### Solved bugs
+### Solved bugs
 
 - When i wrote my code and tried to run it, i got error messages because the indentation was wrong. I fixed 
 this by right clicking on the code, then ''Format document with python''.
