@@ -4,6 +4,8 @@ This is my Tic Tac Toe game, which runs in the Code Institute mock terminal on H
 
 In this game you can play against a friend you have in real life or any person you know.
 
+[Here is the live version of my project](https://my-tic-tac-toe-gamee.herokuapp.com/)
+
 ![Different devices](assets/images/Responsive.png)
 
 ## How to play
