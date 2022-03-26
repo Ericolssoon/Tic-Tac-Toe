@@ -52,7 +52,7 @@ def play(player_turn):
     print_board()
     while True:
         print("Player " + player_turn + ", your turn.")
-        
+
         input_ok = False
         row = ""
         column = ""
@@ -68,7 +68,7 @@ def play(player_turn):
                     print("This spot is already taken. Try again.")
             else:
                 print("Try again.")
-            
+
         board[row][column] = player_turn
 
         print_board()
