@@ -69,8 +69,6 @@ def play(player_turn):
             else:
                 print("Try again.")
             
-
-
         board[row][column] = player_turn
 
         print_board()
